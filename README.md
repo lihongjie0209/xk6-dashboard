@@ -1,15 +1,24 @@
-[![Go Report Card](https://goreportcard.com/badge/github.com/grafana/xk6-dashboard)](https://goreportcard.com/report/github.com/grafana/xk6-dashboard)
-[![GitHub Actions](https://github.com/grafana/xk6-dashboard/actions/workflows/validate.yml/badge.svg)](https://github.com/grafana/xk6-dashboard/actions/workflows/validate.yml)
-![GitHub Downloads](https://img.shields.io/github/downloads/grafana/xk6-dashboard/total)
-[![GitHub Release](https://img.shields.io/github/v/release/grafana/xk6-dashboard)](https://github.com/grafana/xk6-dashboard/releases/)
+[![Go Report Card](https://goreportcard.com/badge/github.com/lihongjie0209/xk6-dashboard)](https://goreportcard.com/report/github.com/lihongjie0209/xk6-dashboard)
+[![GitHub Release](https://img.shields.io/github/v/release/lihongjie0209/xk6-dashboard)](https://github.com/lihongjie0209/xk6-dashboard/releases/)
 
 
-# xk6-dashboard
+# xk6-dashboard (Chinese Fork)
+
+A fork of [xk6-dashboard](https://github.com/grafana/xk6-dashboard) with **Chinese language support** 🇨🇳
 
 ![k6 dashboard overview dark](screenshot/k6-dashboard-overview-dark.png#gh-dark-mode-only)
 ![k6 dashboard overview light](screenshot/k6-dashboard-overview-light.png#gh-light-mode-only)
 
-A [k6 extension](https://k6.io/docs/extensions/) that that makes [k6](https://k6.io) metrics available on a web-based dashboard. The dashboard is updated continuously during the test run using [server-sent events (SSE)](https://developer.mozilla.org/en-US/docs/Web/API/Server-sent_events/Using_server-sent_events). The test run [report can be exported](#save-report) to a responsive self-contained HTML file, which can be displayed even without an Internet connection.
+A [k6 extension](https://k6.io/docs/extensions/) that makes [k6](https://k6.io) metrics available on a web-based dashboard with **full Chinese interface support**. The dashboard is updated continuously during the test run using [server-sent events (SSE)](https://developer.mozilla.org/en-US/docs/Web/API/Server-sent_events/Using_server-sent_events). The test run [report can be exported](#save-report) to a responsive self-contained HTML file in Chinese, which can be displayed even without an Internet connection.
+
+## Features
+
+- 🌐 **Full Chinese UI Support** - Complete Chinese translation of the dashboard interface
+- 📊 **Real-time Dashboard** - Monitor k6 metrics in real-time via web browser
+- 📈 **Interactive Charts** - Visualize test metrics with zoomable, interactive graphs
+- 💾 **HTML Export** - Export test reports as self-contained HTML files (with Chinese text)
+- 🎯 **Multiple Metrics** - Support for aggregation, summary, timing, and custom metrics
+- 🚀 **Multiple Extensions** - Can be combined with other xk6 extensions
 
 <details>
 <summary><strong>Screenshots</strong></summary>
@@ -65,13 +74,28 @@ You can download pre-built k6 binaries from the [Releases](https://github.com/gr
 <details>
 <summary><strong>Build</strong></summary>
 
-The [xk6](https://github.com/grafana/xk6) build tool can be used to build a k6 that will include xk6-faker extension:
+The [xk6](https://github.com/grafana/xk6) build tool can be used to build a k6 that will include xk6-dashboard extension:
 
 ```bash
-$ xk6 build --with github.com/grafana/xk6-dashboard@latest
+$ xk6 build --with github.com/lihongjie0209/xk6-dashboard@v0.0.1
 ```
 
-For more build options and how to use xk6, check out the [xk6 documentation]([xk6](https://github.com/grafana/xk6)).
+### Chinese Language Support
+
+This fork includes support for Chinese language in the dashboard UI. It uses [xk6-dashboard-assets](https://github.com/lihongjie0209/xk6-dashboard-assets) v0.2.1 which provides a fully translated Chinese interface.
+
+To build a k6 with multiple extensions including this Chinese-enabled dashboard:
+
+```bash
+$ xk6 build --with github.com/lihongjie0209/xk6-dashboard@v0.0.1 `
+  --with github.com/grafana/xk6-sql@latest `
+  --with github.com/mostafa/xk6-kafka@latest `
+  --with github.com/grafana/xk6-redis@latest `
+  --with github.com/grafana/xk6-faker@latest `
+  --output k6-custom.exe
+```
+
+For more build options and how to use xk6, check out the [xk6 documentation](https://github.com/grafana/xk6).
 
 </details>
 
