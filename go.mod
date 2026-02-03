@@ -3,7 +3,7 @@ module github.com/lihongjie0209/xk6-dashboard
 go 1.24.0
 
 require (
-	github.com/grafana/xk6-dashboard v0.7.13
+	github.com/grafana/xk6-dashboard v0.8.0
 	github.com/grafana/xk6-dashboard-assets v0.1.1
 	github.com/pkg/browser v0.0.0-20240102092130-5ac0b6a4141c
 	github.com/r3labs/sse/v2 v2.10.0
@@ -56,3 +56,7 @@ require (
 )
 
 replace github.com/grafana/xk6-dashboard-assets => github.com/lihongjie0209/xk6-dashboard-assets v0.2.1
+
+replace github.com/grafana/xk6-dashboard => github.com/lihongjie0209/xk6-dashboard v0.0.3
+
+replace github.com/grafana/xk6-dashboard => github.com/lihongjie0209/xk6-dashboard v0.0.3
