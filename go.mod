@@ -4,7 +4,7 @@ go 1.24.0
 
 require (
 	github.com/grafana/xk6-dashboard v0.7.13
-	github.com/lihongjie0209/xk6-dashboard-assets v0.2.1
+	github.com/grafana/xk6-dashboard-assets v0.1.1
 	github.com/pkg/browser v0.0.0-20240102092130-5ac0b6a4141c
 	github.com/r3labs/sse/v2 v2.10.0
 	github.com/sirupsen/logrus v1.9.3
@@ -22,7 +22,6 @@ require (
 	github.com/go-logr/logr v1.4.3 // indirect
 	github.com/go-logr/stdr v1.2.2 // indirect
 	github.com/google/uuid v1.6.0 // indirect
-	github.com/grafana/xk6-dashboard-assets v0.1.1 // indirect
 	github.com/grpc-ecosystem/grpc-gateway/v2 v2.27.2 // indirect
 	github.com/inconshreveable/mousetrap v1.0.0 // indirect
 	github.com/josharian/intern v1.0.0 // indirect
@@ -55,3 +54,5 @@ require (
 	gopkg.in/guregu/null.v3 v3.3.0 // indirect
 	gopkg.in/yaml.v3 v3.0.1 // indirect
 )
+
+replace github.com/grafana/xk6-dashboard-assets => github.com/lihongjie0209/xk6-dashboard-assets v0.2.1

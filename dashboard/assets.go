@@ -8,7 +8,7 @@ import (
 	"encoding/json"
 	"io/fs"
 
-	dassets "github.com/lihongjie0209/xk6-dashboard-assets"
+	dassets "github.com/grafana/xk6-dashboard-assets"
 	"github.com/sirupsen/logrus"
 )
 
